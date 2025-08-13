@@ -80,3 +80,53 @@ Proyek ini dilisensikan di bawah MIT License—lihat file LICENSE untuk detail l
 Kontak
 Dibuat dan dikembangkan oleh reyreygits
 Jika ada pertanyaan atau ide, silakan contact via:
+Fitur
+Layout kartu paket followers dengan efek hover
+
+Responsif: menyesuaikan tampilan perangkat (mobile → desktop)
+
+Form pesan dengan integrasi tombol WhatsApp
+
+Hero section untuk menarik perhatian pengunjung
+
+Cara Gunakan
+Pilih paket followers (500, 1K, 5K, 10K)
+
+Isi form: nama, username, nomor telepon
+
+Klik tombol Pesan Sekarang — aplikasi WhatsApp akan terbuka dengan pesan terisi otomatis
+
+Kirim pesan untuk mengonfirmasi pesanan
+
+Roadmap
+ Tambah halaman FAQ
+
+ Integrasi metode pembayaran langsung (QRIS, e-wallet)
+
+ Tambah testimoni pengguna
+
+ Optimasi SEO dan timestamps
+
+Kontribusi
+Kontribusi sangat dipersilakan! Jika kamu ingin berkontribusi:
+
+Fork repo ini
+
+Buat branch fitur (git checkout -b fitur/kolaborasi)
+
+Commit perubahan (git commit -m "Tambah halaman FAQ")
+
+Push ke branch (git push origin fitur/kolaborasi)
+
+Buat pull request
+
+Lisensi
+Proyek ini dilisensikan di bawah MIT License—lihat file LICENSE untuk detail lengkapnya.
+
+Kontak
+Dibuat dan dikembangkan oleh reyreygits
+Jika ada pertanyaan atau ide, silakan contact via:
+
+Email: email@example.com
+
+GitHub Profile: @reyreygits
