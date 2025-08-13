@@ -1,200 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glorygame99 - Jual Followers IG</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
+ :root {
+      --bg: #ececec;
+      --text: #000;
+      --highlight: #ffd700;
+      --card-bg: rgba(0,0,0,0.05);
     }
+    body.dark-mode {
+      --bg: #0f2027;
+      --text: #f0f0f0;
+      --highlight: #ffeb3b;
+      --card-bg: rgba(255,255,255,0.1);
+    }
+
+    /* Base Styling */
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #f0f0f0;
-      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     .site-header {
-      background: rgba(255, 255, 255, 0.1);
       text-align: center;
-      padding: 40px 20px;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      color: #ffd700;
-      text-shadow: 0 0 10px #ffd700;
-      border-bottom: 2px solid #ffd700;
+      padding: 30px 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--highlight);
+      border-bottom: 2px solid var(--highlight);
     }
     main {
       flex: 1;
-      padding: 40px 20px;
-      max-width: 1200px;
+      padding: 20px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     h2 {
       text-align: center;
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: #fff;
-      text-shadow: 0 0 5px #ffbf00;
+      margin-bottom: 20px;
     }
     .card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      box-shadow:
-        0 4px 15px rgba(255, 215, 0, 0.3),
-        inset 0 0 15px rgba(255, 215, 0, 0.2);
-      padding: 25px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
     }
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow:
-        0 10px 30px rgba(255, 215, 0, 0.7),
-        inset 0 0 25px rgba(255, 215, 0, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     .card img {
-      width: 120px;
+      width: 100px;
       border-radius: 50%;
       margin-bottom: 15px;
-      border: 3px solid #ffd700;
-      box-shadow: 0 0 15px #ffd700;
+      border: 3px solid var(--highlight);
     }
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #fff;
-      text-shadow: 0 0 5px #ffd700;
-    }
-    .card p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-      color: #ddd;
-      line-height: 1.4;
-    }
+    .card h3 { margin-bottom: 8px; }
     .product-price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #ffd700;
-      text-shadow: 0 0 6px #ffec99;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--highlight);
+    }
+    .order-form {
+      background: var(--card-bg);
+      padding:20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+    .order-form h2 {
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .order-form label {
+      display:block;
+      margin: 10px 0 4px;
+    }
+    .order-form input, .order-form select, .order-form button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid var(--highlight);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text);
+    }
+    .order-form button {
+      background: var(--highlight);
+      color: var(--bg);
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .order-form button:hover {
+      opacity: 0.8;
     }
     .site-footer {
       text-align: center;
-      padding: 20px;
-      background: rgba(255, 215, 0, 0.15);
-      color: #222;
-      font-weight: 600;
-      letter-spacing: 1.2px;
-      border-top: 2px solid #ffd700;
-      user-select: none;
+      padding: 15px;
+      background-color: var(--card-bg);
+      font-size: 0.9rem;
+      border-top: 2px solid var(--highlight);
     }
-    /* Responsive adjustments */
-    @media (max-width: 480px) {
-      .site-header {
-        font-size: 1.8rem;
-        padding: 30px 10px;
-      }
-      .card img {
-        width: 100px;
-      }
-      .card h3 {
-        font-size: 1.3rem;
-      }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--card-bg);
+      border: none;
+      padding: 8px 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--text);
+      transition: background 0.3s ease;
+    }
+    .theme-toggle:hover {
+      background: var(--highlight);
+      color: var(--bg);
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    Glorygame99 — Jual Followers Instagram
-  </header>
+  <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+
+  <header class="site-header">Glorygame99 — Jual Followers Instagram</header>
 
   <main>
-    <h2>Pilih Paket Followers Instagram Sultan</h2>
+    <h2>Pilih Paket Followers Instagram</h2>
     <section class="card-container">
       <article class="card">
-<img src="images/followers-10000.jpg" alt="followers-10000.jpg" width="120">
+        <img src="images/followers-10000.jpg" alt="500 Followers">
         <h3>Followers Instagram 500</h3>
-        <p>Menambah 500 followers Instagram aktif MIX.</p>
-        <div class="product-price">Rp 25.000</div>
+        <p>Menambah 500 followers aktif MIX.</p>
+        <div class="product-price">Rp 25.000</div>
       </article>
-
       <article class="card">
-<img src="images/followers-10000.jpg" alt="followers-10000.jpg" width="120">
+        <img src="images/followers-10000.jpg" alt="1,000 Followers">
         <h3>Followers Instagram 1,000</h3>
-        <p>Menambah 1,000 followers Instagram aktif MIX.</p>
-        <div class="product-price">Rp 45.000</div>
+        <p>Menambah 1,000 followers aktif MIX.</p>
+        <div class="product-price">Rp 45.000</div>
       </article>
-
       <article class="card">
-<img src="images/followers-10000.jpg" alt="followers-10000.jpg" width="120">
+        <img src="images/followers-10000.jpg" alt="5,000 Followers">
         <h3>Followers Instagram 5,000</h3>
-        <p>Menambah 5,000 followers Instagram aktif.</p>
-        <div class="product-price">Rp 200.000</div>
+        <p>Menambah 5,000 followers aktif.</p>
+        <div class="product-price">Rp 200.000</div>
       </article>
-
       <article class="card">
-<img src="images/followers-10000.jpg" alt="followers-10000.jpg" width="120">
+        <img src="images/followers-10000.jpg" alt="10,000 Followers">
         <h3>Followers Instagram 10,000</h3>
-        <p>Menambah 10,000 followers Instagram aktif.</p>
-        <div class="product-price">Rp 350.000</div>
+        <p>Menambah 10,000 followers aktif.</p>
+        <div class="product-price">Rp 350.000</div>
       </article>
     </section>
+
+    <div class="order-form">
+      <h2>Pesan Followers Instagram</h2>
+      <form>
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
+
+        <label for="followers">Pilih Paket Followers</label>
+        <select id="followers" required>
+          <option value="500">500 Followers — Rp 25.000</option>
+          <option value="1000">1,000 Followers — Rp 45.000</option>
+          <option value="5000">5,000 Followers — Rp 200.000</option>
+          <option value="10000">10,000 Followers — Rp 350.000</option>
+        </select>
+
+        <label for="instagram">Username Instagram</label>
+        <input type="text" id="instagram" placeholder="Masukkan username Instagram" required>
+
+        <label for="contact">Nomor Telepon</label>
+        <input type="tel" id="contact" placeholder="Masukkan nomor telepon" required>
+
+        <button type="button" id="whatsapp-btn">Pesan Sekarang</button>
+      </form>
+    </div>
   </main>
 
-  <!-- Formulir Pemesanan -->
-    <div class="order-form">
-        <h2>Pesan Followers Instagram</h2>
-        <form action="submit_order.php" method="POST">
-            <label for="name">Nama Lengkap</label>
-            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+  <footer class="site-footer">&copy; 2025 Glorygame99. Semua hak dilindungi.</footer>
 
-            <label for="followers">Pilih Paket Followers</label>
-            <select id="followers" name="followers" required>
-                <option value="1000">500 Followers - Rp 25.000</option>
-                <option value="1000">1,000 Followers - Rp 45.000</option>
-                <option value="5000">5,000 Followers - Rp 200.000</option>
-                <option value="10000">10,000 Followers - Rp 350.000</option>
-            </select>
+  <script>
+    // Theme toggle functionality with localStorage
+    const btn = document.getElementById('themeToggle');
+    const bodyEl = document.body;
+    btn.addEventListener('click', () => {
+      bodyEl.classList.toggle('dark-mode');
+      localStorage.setItem('theme', bodyEl.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+    // Set theme on load
+    if (localStorage.getItem('theme') === 'dark') {
+      bodyEl.classList.add('dark-mode');
+    }
 
-            <label for="instagram">Username Instagram</label>
-            <input type="text" id="instagram" name="instagram" placeholder="Masukkan username Instagram" required>
-
-            <label for="contact">Nomor Telepon</label>
-            <input type="tel" id="contact" name="contact" placeholder="Masukkan nomor telepon" required>
-
-<button type="button" id="whatsapp-btn">Pesan Sekarang</button>
-        </form>
-<script>
-  document.getElementById("whatsapp-btn").addEventListener("click", function () {
-    const username = document.getElementById("instagram").value;
-    const contact = document.getElementById("contact").value;
-
-    const waNumber = "12498950768";
-
-    const message = `Halo, GLORYGAME99 saya ingin memesan followers.\nUsername Instagram: ${username}\nNomor Telepon: ${contact}`;
-
-    const encodedMessage = encodeURIComponent(message);
-
-window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, "_blank");
-  });
-</script>
-    </div>
-</div>
-
-<footer>
-</footer>
-
+    // WhatsApp order logic
+    document.getElementById('whatsapp-btn').addEventListener('click', () => {
+      const username = document.getElementById('instagram').value;
+      const contact = document.getElementById('contact').value;
+      const waNumber = '12498950768';
+      const message = `Halo, GLORYGAME99 saya ingin memesan followers.\nUsername: ${username}\nNomor Telepon: ${contact}`;
+      window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    });
+  </script>
 </body>
 </html>
